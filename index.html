@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Lookbook 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            z-index: 9999;
+        }
+
+        .logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+            color: #f5f5f5;
+            letter-spacing: 6px;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #c7bfff;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .scroll-link {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .scroll-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        #collection {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #f5f5f5;
+            letter-spacing: 4px;
+        }
+
+        .lookbook-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 1200px;
+            margin-inline: auto;
+        }
+
+        .lookbook-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lookbook-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .lookbook-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.6);
+            pointer-events: none;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1; 
+        }
+        .lookbook-item:nth-child(3) {
+            grid-column: 1 / -1; 
+            justify-self: center; 
+            width: 50%; 
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: transparent; 
+            color: #f5f5f5;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AURILLE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ethereal">Ethereal Dreams</a></li>
+            <li><a href="#urban">Urban Elegance</a></li>
+            <li><a href="#viewall">View All</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>AURILLE</h1>
+        <p class="subtitle">WINTER 2025</p>
+        <a href="#collection" class="scroll-link">VIEW COLLECTION</a>
+        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="AURILLE.mp4" type="video/mp4">
+        </video>
+    </header>
+
+    <section id="collection">
+        <h2 class="section-title">NEW ARRIVALS</h2>
+        
+        <div class="lookbook-grid">
+            <div class="lookbook-item">
+                <div class="lookbook-image">
+                    <a id="urban" href="ethereal.html" target="_blank">
+                        <img src="ethereal.png"/>
+                        <div class="overlay-text">Ethereal Dreams</div>
+                    </a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <div class="lookbook-image">
+                    <a id="ethereal" href="urban.html" target="_blank">
+                        <img src="urban.png"/>
+                        <div class="overlay-text">Urban Elegance</div>
+                    </a>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <div class="lookbook-image">
+                    <a id="viewall" href="viewcollection.html" target="_blank">
+                        <img src="view.png"/>
+                        <div class="overlay-text">View All</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Aurille. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
